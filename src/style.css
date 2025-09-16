@@ -66,6 +66,23 @@ header {
   animation: funnyRotatingLogo 500ms infinite ease;
 }
 
+@media (max-width: 1024px) {
+  .flex {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+    margin-top: 4rem;
+  }
+}
+
 .profile-card {
   width: 400px;
   height: 500px;

@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Jolly Lodger", system-ui;
+  height: 100vh;
+}
+
+img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.backgroundOverLay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  animation: funnyBackground 1s infinite ease-in;
+}
+
+header {
+  padding-top: 3rem;
+  /* background-color: black; */
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 9rem;
+  color: white;
+  animation: funnyVibrateAndTextStroke 500ms infinite ease;
+}
+
+.connections {
+  height: 4rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.connections img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.logo-link {
+  display: inline-block;
+  animation: funnyRotatingLogo 500ms infinite ease;
+  opacity: 70%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 6rem;
+  margin-top: 8rem;
+  padding: 0 10rem 0 10rem;
+  animation: funnyRotatingLogo 500ms infinite ease;
+}
+
+.profile-card {
+  width: 400px;
+  height: 500px;
+  padding: 1rem;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: funnyRotatingLogo 500ms infinite ease;
+}
+
+.profile-card img {
+  height: 20rem;
+  width: 20rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 7px solid black;
+}
+
+.profile-card h2 {
+  font-size: 4rem;
+  animation: funnyVibrateAndTextStroke 500ms infinite ease;
+}
+
+.info-card {
+  flex: 1;
+  border: 3px solid black;
+  padding: 1.5rem;
+  border-radius: 3px;
+  height: 350px;
+  animation: funnyInfoCard 500ms infinite ease;
+}
+
+.info-card h2 {
+  font-size: 7rem;
+  animation: funnyVibrateAndTextStroke 500ms infinite ease;
+}
+
+
+.info-card p {
+  font-size: 2rem;
+  animation: funnyKeyStrokes 500ms infinite ease;
+}
+
+
+@keyframes funnyInfoCard {
+  0%   { transform: translate(0, 0) scale(0.1); }
+  10%  { transform: translate(3px, -2px); }
+  20%  { transform: translate(-4px, 2px); }
+  30%  { transform: translate(5px, -3px); }
+  40%  { transform: translate(-2px, 4px); }
+  50%  { transform: translate(4px, -1px) scale(2); }
+  60%  { transform: translate(-5px, -3px); }
+  70%  { transform: translate(2px, 5px); }
+  80%  { transform: translate(-3px, 2px); }
+  90%  { transform: translate(1px, -4px); }
+  100% { transform: translate(0, 0, scale(7)); }
+}
+
+@keyframes funnyRotatingLogo {
+  0%   { transform: translate(0, 0); }
+  10%  { transform: translate(3px, -2px); }
+  20%  { transform: translate(-4px, 2px); }
+  30%  { transform: translate(5px, -3px); }
+  40%  { transform: translate(-2px, 4px); }
+  50%  { transform: translate(4px, -1px); }
+  60%  { transform: translate(-5px, -3px); }
+  70%  { transform: translate(2px, 5px); }
+  80%  { transform: translate(-3px, 2px); }
+  90%  { transform: translate(1px, -4px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes funnyVibrateAndTextStroke {
+  0% {
+    -webkit-text-stroke: 2px rgb(255, 0, 0);
+    transform: rotate(2deg) scale(0.5);
+  }
+  10%  { -webkit-text-stroke: 2px rgb(253, 253, 253); }
+  20%  { -webkit-text-stroke: 2px rgb(10, 219, 10); }   
+  30%  { -webkit-text-stroke: 2px rgb(228, 217, 217); } 
+  40%  { -webkit-text-stroke: 2px rgb(255, 255, 0); }   
+  50% {
+    -webkit-text-stroke: 2px rgb(228, 217, 217);
+    transform: rotate(0deg) scale(1);
+  }
+  60%  { -webkit-text-stroke: 2px rgb(128, 0, 128); }   /* purple */
+  70%  { -webkit-text-stroke: 2px rgb(228, 217, 217); } /* white */
+  80%  { -webkit-text-stroke: 2px rgb(0, 0, 255); }    /* blue */
+  90%  { -webkit-text-stroke: 2px rgb(228, 217, 217); } /* white */
+  100% {
+    -webkit-text-stroke: 2px rgb(255, 68, 0);
+    transform: rotate(-4deg) scale(0.5);
+  }
+}
+
+@keyframes funnyKeyStrokes {
+  0%   { -webkit-text-stroke: 2px rgba(255, 0, 0, 0.8); }     /* red */
+  10%  { -webkit-text-stroke: 2px rgba(228, 217, 217, 0.8); } /* white */
+  20%  { -webkit-text-stroke: 2px rgba(10, 219, 10, 0.9); }   /* green */
+  30%  { -webkit-text-stroke: 2px rgba(228, 217, 217, 0.8); } /* white */
+  40%  { -webkit-text-stroke: 2px rgba(255, 255, 0, 0.9); }   /* yellow */
+  50%  { -webkit-text-stroke: 2px rgba(228, 217, 217, 0.8); } /* white */
+  60%  { -webkit-text-stroke: 2px rgba(128, 0, 128, 0.7); }   /* purple */
+  70%  { -webkit-text-stroke: 2px rgba(228, 217, 217, 0.8); } /* white */
+  80%  { -webkit-text-stroke: 2px rgba(0, 0, 255, 0.35); }    /* blue */
+  90%  { -webkit-text-stroke: 2px rgba(228, 217, 217, 0.8); } /* white */
+  100% { -webkit-text-stroke: 2px rgba(255, 68, 0, 0.7); }    /* orange */
+}
+
+@keyframes funnyBackground {
+  0%   { background-color: rgba(255, 0, 0, 0.8); }     /* red */
+  10%  { background-color: rgba(228, 217, 217, 0.8); } /* white */
+  20%  { background-color: rgba(10, 219, 10, 0.9); }   /* green */
+  30%  { background-color: rgba(228, 217, 217, 0.8); } /* white */
+  40%  { background-color: rgba(255, 255, 0, 0.9); }   /* yellow */
+  50%  { background-color: rgba(228, 217, 217, 0.8); } /* white */
+  60%  { background-color: rgba(128, 0, 128, 0.7); }   /* purple */
+  70%  { background-color: rgba(228, 217, 217, 0.8); } /* white */
+  80%  { background-color: rgba(0, 0, 255, 0.35); }    /* blue */
+  90%  { background-color: rgba(228, 217, 217, 0.8); } /* white */
+  100% { background-color: rgba(255, 68, 0, 0.7); }    /* orange */
+}
+
